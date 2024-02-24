@@ -1,12 +1,3 @@
-create database xlogia 
-use xlogia
-create table xlogia_tbl 
-(Employee_Id int primary key, 
- Employee_Name nvarchar(30),
- Employee_Age nvarchar(30),
- Employee_Email nvarchar(30),
- )
-
 
 create database eLibraryDB
 use eLibraryDB
@@ -44,9 +35,7 @@ create table admin_login_tbl
  password nvarchar(50),
  full_name nvarchar(50))
 
- drop table book_issue_tbl 
- insert into book_issue_tbl(member_id, member_name, book_id, book_name, issue_date, due_date)
- values (2, 'bhagyashri', '5', 'IT', '24', '28')
+
 create table book_issue_tbl 
 (member_id nvarchar(50) primary key, 
  member_name nvarchar(50),
@@ -72,18 +61,7 @@ member_id nvarchar(50) primary key,
  account_status nvarchar(50)
  )
 
-select * from publisher_master_tbl where member_id='Bhagya@123' and password='asfg';
 
-insert into member_master_tbl ()
-
-update publisher_master_tbl set publisher_name='hey' WHERE publisher_id=1
-delete from publisher_master_tbl where publisher_id =1
-
-insert into book_master_tbl (book_id, book_name, genre, author_name, publisher_name, publish_date, language, edition, book_cost, no_of_pages, book_description, actual_stock, current_stock, book_img_link) values
-                             ('2', 'new', 'hey',           'Bhagya',   ' bha',         '1',       1, '1.2',    '200' ,    '100',      'new'      ,'2', '2' , 'new')                                                                                                                                       
-select * from member_master_tbl where member_id = 
-select full_name from member_master_tbl where member_id ='bhagya'
-select * from member_master_tbl
 update book_master_tbl set current_stock= current_stock+2 where book_id=1
 delete from member_master_tbl where state='Bha'
 
